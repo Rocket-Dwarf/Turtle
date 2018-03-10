@@ -1,0 +1,9 @@
+C:\Users\Jake\documents\visual studio 2015\Projects\Turtle\Turtle\obj\Debug\Turtle.TurtleGraphicsForm.resources
+C:\Users\Jake\documents\visual studio 2015\Projects\Turtle\Turtle\obj\Debug\Turtle.Properties.Resources.resources
+C:\Users\Jake\documents\visual studio 2015\Projects\Turtle\Turtle\obj\Debug\Turtle.csproj.GenerateResource.Cache
+C:\Users\Jake\documents\visual studio 2015\Projects\Turtle\Turtle\bin\Debug\Turtle.dll
+C:\Users\Jake\documents\visual studio 2015\Projects\Turtle\Turtle\bin\Debug\Turtle.pdb
+C:\Users\Jake\documents\visual studio 2015\Projects\Turtle\Turtle\obj\Debug\Turtle.dll
+C:\Users\Jake\documents\visual studio 2015\Projects\Turtle\Turtle\obj\Debug\Turtle.pdb
+C:\Users\Jake\documents\visual studio 2015\Projects\Turtle\Turtle\obj\Debug\Turtle.csprojResolveAssemblyReference.cache
+C:\Users\Jake\documents\visual studio 2015\Projects\Turtle\Turtle\bin\Debug\Turtle.XML

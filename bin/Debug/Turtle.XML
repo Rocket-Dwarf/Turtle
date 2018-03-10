@@ -1,0 +1,364 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Turtle</name>
+    </assembly>
+    <members>
+        <member name="T:Turtle.Vector">
+            <summary>
+            A 2D Vector Object
+            </summary>
+        </member>
+        <member name="M:Turtle.Vector.CalculateMagnitude(System.Single,System.Single)">
+            <summary>
+            Calculates the Magnitude of the Vector given it's i and j components
+            </summary>
+            <param name="VectoriComponent">The i Component of the Vector</param>
+            <param name="VectorjComponent">The j Component of the Vector</param>
+            <returns>The Magnitude of the Vector</returns>
+        </member>
+        <member name="M:Turtle.Vector.CalculateAngleWithiComponent(System.Single,System.Single)">
+            <summary>
+            Calculates the Angle of the Vector with i given it's i and j components
+            </summary>
+            <param name="VectoriComponent">The i Component of the Vector</param>
+            <param name="VectorjComponent">The j Component of the Vector</param>
+            <returns>The Vector's Angle with i of the Vector</returns>
+        </member>
+        <member name="M:Turtle.Vector.CalculateAngleWithjComponent(System.Single,System.Single)">
+            <summary>
+            Calculates the Angle of the Vector with j given it's i and j components
+            </summary>
+            <param name="VectoriComponent">The i Component of the Vector</param>
+            <param name="VectorjComponent">The j Component of the Vector</param>
+            <returns>The Vector's Angle with j of the Vector</returns>
+        </member>
+        <member name="T:Turtle.Vector.UnitVector">
+            <summary>
+            The Unit Vector of the current 2D Vector Object
+            </summary>
+        </member>
+        <member name="M:Turtle.Vector.UnitVector.#ctor(System.Double,System.Single,System.Single)">
+            <summary>
+            Calculates the Unit Vector of a given Vector
+            </summary>
+            <param name="VectorMagnitude">The Magnitude of the Vector</param>
+            <param name="VectoriComponent">The i component of the Vector</param>
+            <param name="VectorjComponent">The j component of the Vector</param>
+        </member>
+        <member name="M:Turtle.Vector.#ctor(System.Int64,System.Double)">
+            <summary>
+            Builds a 2D Vector From it's Magnitude and the angle it makes with i
+            </summary>
+            <param name="KnownMagnitude">The Magnitude of the vector</param>
+            <param name="AngleWithi">The Angle the vector makes with i</param>
+        </member>
+        <member name="M:Turtle.Vector.#ctor(System.Single,System.Single)">
+            <summary>
+            Builds a 2D vector From it's i and j Componets
+            </summary>
+            <param name="iVal">The i Value of the Vector</param>
+            <param name="jVal">The j Value of the Vector</param>
+        </member>
+        <member name="T:Turtle.RGB">
+            <summary>
+            A Colour Stucture represented by an RGB Value
+            </summary>
+        </member>
+        <member name="M:Turtle.RGB.#ctor(System.String)">
+            <summary>
+            Creates a RGB Colour from a string containing a RGB or ARGB Colour Value
+            </summary>
+            <param name="HexCode">The string containing the Colour Value </param>
+        </member>
+        <member name="M:Turtle.RGB.#ctor(System.UInt32)">
+            <summary>
+            Creates a RGB Colour from an (unsigned) integer value which contains a RGB or ARGB Colour Value
+            </summary>
+            <param name="HexCode">The numeric RGB or ARGB value</param>
+        </member>
+        <member name="M:Turtle.RGB.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Creates a RGB Colour from the Given string which contain the Component Values
+            </summary>
+            <param name="Red">The string containing the Red Value of the Colour</param>
+            <param name="Green">The string containing the Green Value of the Colour</param>
+            <param name="Blue">The string containing the Blue Value of the Colour</param>
+        </member>
+        <member name="M:Turtle.RGB.#ctor(System.Byte,System.Byte,System.Byte)">
+            <summary>
+            Creates a RGB Colour from the Given Component Values
+            </summary>
+            <param name="Red">The Red Value of the Colour</param>
+            <param name="Green">The Green Value of the Colour</param>
+            <param name="Blue">The Blue Value of the Colour</param>
+        </member>
+        <member name="T:Turtle.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Turtle.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Turtle.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Turtle.Properties.Resources.TurtleHeadIMG">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="M:Turtle.TurtleGraphicsForm.UpdateTurtlePosition">
+            <summary>
+            Update the location and roatation of the Turtle
+            </summary>
+        </member>
+        <member name="M:Turtle.TurtleGraphicsForm.RotateImage(System.Drawing.Bitmap,System.Single)">
+            <summary>
+            Rotates the specifed Bitmap Image by the specifed angle
+            </summary>
+            <param name="IntialBitmap">The Bitmap Image to rotate</param>
+            <param name="AngleOfRotation">The angle (degrees) to rotate the Image by</param>
+            <returns>The Rotated Bitmap Image</returns>
+        </member>
+        <member name="M:Turtle.TurtleGraphicsForm.FetchBoundingRectangle(System.Drawing.Image,System.Drawing.Drawing2D.Matrix)">
+            <summary>
+            Finds the Bounding Rectangle for a given Bitmap Image with the corresponding Matrix for Roatation
+            </summary>
+            <param name="IntialBitmap">The Bitmap Image to find the Bounding Rectangle of</param>
+            <param name="RotationMatrix">The Roatation Matrix of the Bitmap Image</param>
+            <returns>The Bounding Image</returns>
+        </member>
+        <member name="F:Turtle.TurtleGraphicsForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Turtle.TurtleGraphicsForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Turtle.TurtleGraphicsForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Turtle.Settings">
+            <summary>
+            The Settings of the turtle 
+            i.e The angle unit; The Pen state; and the Fill Color.
+            </summary>
+        </member>
+        <member name="P:Turtle.Settings.AngleUnit">
+            <summary>
+            The Angular unit of the Turtle
+            </summary>
+        </member>
+        <member name="M:Turtle.Settings.PenUp">
+            <summary>
+            Stops the Turtle Drawing on the form - movement is stil allowed
+            </summary>
+        </member>
+        <member name="M:Turtle.Settings.PenDown">
+            <summary>
+            Restarts the Turtle Drawing on the form
+            </summary>
+        </member>
+        <member name="F:Turtle.Settings.PropertyInterpreter">
+            <summary>
+            Prevents the user from changing color values directly
+            </summary>
+        </member>
+        <member name="M:Turtle.Settings.PenColor(System.String)">
+            <summary>
+            Changes the Turtle's Pen Color to the Color specifed by the string - numerical values are allowed as well 
+            </summary>
+            <param name="Colour">The new Pen Color of the Turtle</param>
+        </member>
+        <member name="M:Turtle.Settings.PenColor(Turtle.RGB)">
+            <summary>
+            Changes the Turtle's Pen Color to the specifed RGB Color 
+            </summary>
+            <param name="ColourCode">The new Pen Color, specifed by a RGB Color Sturcture </param>
+        </member>
+        <member name="M:Turtle.Settings.PenColor(System.Byte,System.Byte,System.Byte)">
+            <summary>
+            Changes the Turtle's Pen Colour to an RGB Colour given its Component Values
+            </summary>
+            <param name="Red">The Red Value of the Colour</param>
+            <param name="Green">The Green Value of the Colour</param>
+            <param name="Blue">The Blue Value of the Colour</param>
+        </member>
+        <member name="M:Turtle.Settings.PenColor(System.Byte)">
+            <summary>
+            Changes the Turtle's Pen Color to a 8-bit integer returning a KnownColor 
+            </summary>
+            <param name="KnownColorVal">The 8-bit integer used to specify a color from KnownColor</param>
+        </member>
+        <member name="M:Turtle.Settings.PenColor(System.UInt32)">
+            <summary>
+            Changes the Turtle's Pen Color to the vaule of an (unsigned) integer containing a RGB or ARGB Colour Value
+            </summary>
+            <param name="RGBColorCode">An (unsigned) integer containing a RGB or ARGB Color Value</param>
+        </member>
+        <member name="M:Turtle.Settings.PenWidth(System.Byte)">
+            <summary>
+            Changes the width of the Pen to specifed (unsigned 8-bit) integer value
+            </summary>
+            <param name="Size">The width of the Pen</param>
+        </member>
+        <member name="M:Turtle.Settings.PenWidth(System.Single)">
+            <summary>
+            Changes the width of the pen to specifed floating point value
+            </summary>
+            <param name="Size">The width of the Pen</param>
+        </member>
+        <member name="M:Turtle.Settings.PenLoader">
+            <summary>
+            Loades the current Pen into the Pen Queue
+            </summary>
+        </member>
+        <member name="M:Turtle.Settings.BeginFill">
+            <summary>
+            Starts Filling in the encolsed region
+            </summary>
+        </member>
+        <member name="M:Turtle.Settings.EndFill">
+            <summary>
+            Stops Filling in the enclosed region
+            </summary>
+        </member>
+        <member name="M:Turtle.Settings.FillColor(System.String)">
+            <summary>
+            Changes the Turtle's Fill Color to the Color specifed by the string - numerical values are allowed as well 
+            </summary>
+            <param name="Colour">The new Fill Color of the Turtle</param>
+        </member>
+        <member name="M:Turtle.Settings.FillColor(Turtle.RGB)">
+            <summary>
+            Changes the Turtle's Fill Color to the specifed RGB Color 
+            </summary>
+            <param name="ColourCode">The new Fill Color, specifed by a RGB Color Sturcture </param>
+        </member>
+        <member name="M:Turtle.Settings.FillColor(System.Byte,System.Byte,System.Byte)">
+            <summary>
+            Changes the Turtle's Fill Colour to an RGB Colour given its Component Values
+            </summary>
+            <param name="Red">The Red Value of the Colour</param>
+            <param name="Green">The Green Value of the Colour</param>
+            <param name="Blue">The Blue Value of the Colour</param>
+        </member>
+        <member name="M:Turtle.Settings.FillColor(System.Byte)">
+            <summary>
+            Changes the Turtle's Fill Color to a 8-bit integer returning a KnownColor 
+            </summary>
+            <param name="KnownColorVal">The 8-bit integer used to specify a color from KnownColor</param>
+        </member>
+        <member name="M:Turtle.Settings.FillColor(System.UInt32)">
+            <summary>
+            Changes the Turtle's Fill Color to the vaule of an (unsigned) integer containing a RGB or ARGB Colour Value
+            </summary>
+            <param name="RGBColorCode">An (unsigned) integer containing a RGB or ARGB Color Value</param>
+        </member>
+        <member name="M:Turtle.Angles.AngleType.ConversionFactor.#ctor(System.Double,System.Double)">
+            <summary>
+            
+            </summary>
+            <param name="Numerator"></param>
+            <param name="Denominator"></param>
+        </member>
+        <member name="T:Turtle.Assembly">
+            <summary>
+            Manages the Drawing Queues
+            </summary>
+        </member>
+        <member name="T:Turtle.Assembly.CommandQuantityDuad">
+            <summary>
+            Represents a Command and Quantity Pair
+            </summary>
+        </member>
+        <member name="T:Turtle.Assembly.DrawingParameters.GenericRegularPolygonParams">
+            <summary>
+            Parameters for a Regular Polygon
+            </summary>
+        </member>
+        <member name="T:Turtle.Assembly.DrawingParameters.CircleParams">
+            <summary>
+            Parameters for a Circle
+            </summary>
+        </member>
+        <member name="M:Turtle.Assembly.CommandQueueLoader(System.Action{System.Drawing.Graphics})">
+            <summary>
+            Loads the Specified Drawing Command into the Queue
+            </summary>
+            <param name="CurrentlyCalledCommand">The Drawing Command (from the Drawing Class) in the form of a Paramterless Procudure to be queued</param>
+        </member>
+        <member name="M:Turtle.Assembly.LoadFinalCommand">
+            <summary>
+            Loads the Contents of CurrentCommandQuantityPair into the queue, and once loaded clears the objects contents
+            </summary>
+        </member>
+        <member name="M:Turtle.Assembly.CommandCaller(System.Drawing.Graphics,System.Windows.Forms.PictureBox,Turtle.TurtleGraphicsForm)">
+            <summary>
+            Dequeues the Commands in MovementCommandsQueue and Executes them
+            </summary>
+        </member>
+        <member name="T:Turtle.Commands">
+            <summary>
+            The Drawing Commands for the Turtle
+            </summary>
+        </member>
+        <member name="M:Turtle.Commands.Run">
+            <summary>
+            Runs the turtle, with the specifed commands. 
+            n.b. This should be at the end of any and all drawing you wish to do with this library
+            </summary>
+        </member>
+        <member name="M:Turtle.Commands.Forward(System.UInt32)">
+            <summary>
+            Moves the Turtle Forward by the set number of Pixels
+            </summary>
+            <param name="PixelAmount">Distance, in Pixels, you want the Turtle to travel</param>
+        </member>
+        <member name="M:Turtle.Commands.Backward(System.UInt32)">
+            <summary>
+            Moves the Turtle Backwards by the set number of Pixels
+            </summary>
+            <param name="PixelAmount">Distance, in Pixels, you want the Turtle to travel</param>
+        </member>
+        <member name="M:Turtle.Commands.Left(System.Double)">
+            <summary>
+            Rotates the Turtle Counter-Clockwise by the specifed Angle
+            </summary>
+            <param name="Angle">The angle to turn by</param>
+        </member>
+        <member name="M:Turtle.Commands.Right(System.Double)">
+            <summary>
+            Rotates the Turtle Clockwise by the specifed Angle
+            </summary>
+            <param name="Angle">The angle to turn by</param>
+        </member>
+        <member name="M:Turtle.Commands.RegularPolygon(System.UInt64,System.UInt64)">
+            <summary>
+            Draws a Regular Polygon with a Specified Side length
+            </summary>
+            <param name="AmountOfSides">The Number of Sides of the Polygon</param>
+            <param name="Length">The side length of the Polygon</param>
+        </member>
+        <member name="M:Turtle.Commands.Circle(System.UInt64)">
+            <summary>
+            Draws a Circle with the specifed radius
+            </summary>
+            <param name="Radius">The radius of the circle</param>
+        </member>
+    </members>
+</doc>
